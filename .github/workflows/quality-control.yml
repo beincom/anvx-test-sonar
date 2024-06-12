@@ -12,5 +12,5 @@ jobs:
     if: |
       !cancelled()
     name: Unit test
-    uses: beincom/bic-github-workflow/.github/workflows/quality_control_nodejs.yaml@feature/code-quality-sonarqube
+    uses: beincom/bic-github-workflow/.github/workflows/quality_control_nodejs.yaml@master
     
