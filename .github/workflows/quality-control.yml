@@ -1,0 +1,16 @@
+name: Quality Control
+run-name: ${{ github.actor }} just push/merge code
+on:
+  push:
+    branches:
+      - master
+# on:
+#   pull_request:
+#     types: [opened, synchronize, reopened]
+jobs:
+  unit-test:
+    if: |
+      !cancelled()
+    name: Unit test
+    uses: beincom/bic-github-workflow/.github/workflows/quality_control_nodejs.yaml@feature/code-quality-sonarqube
+    
